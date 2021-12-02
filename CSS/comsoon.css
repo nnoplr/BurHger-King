@@ -1,0 +1,293 @@
+div.content{
+    padding-top: 80px;
+    text-align: center;
+    align-items: center;
+}
+
+/* Judul */
+h1{
+    color:rgb(250, 190, 26);
+    background-color: #5B3500;
+    margin-bottom: 25px;
+}
+
+/* video about new burger */
+.videoCS{
+    text-align: center;
+}
+
+.videoBackground{
+    background-color: #5B3500;
+    padding-bottom: 25px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+video{
+    width: 60%;
+}
+
+/* teaser 1 */
+.h2Container{
+    margin: 40px;
+}
+
+h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.gifandDesc{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gif, .descCS{
+    margin: 3rem;
+}
+
+.gif img{
+    width: 70%;
+}
+
+.descCS{
+    text-align: left;
+}
+
+.descCS h3{
+    margin-bottom: 50px;
+}
+.descCS p{
+    font-size: large;
+}
+
+h3{
+    
+    height: 100%;
+    padding-top: 25px;
+    font-size: xx-large;
+    
+}
+
+/* teaser 2 */
+.teaserH3{
+    display: inline-block;
+    background-color: #5B3500;
+    color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 50%;
+    font-weight: 600;
+}
+
+.teaserBackground{
+    background-color: #5B3500;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+}
+
+.ingredientsContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ingredientsItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    transition: 1s;
+}
+
+.labelContainer{
+    position: relative;
+    width: 24%;
+    height: 40px;
+    margin-left: -37%;
+    display: block;
+    text-align: center;
+    z-index: 60;
+}
+.ingredientsItem label{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 5px;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+    display: none;
+}
+
+.ingredientsItem img{
+    width: 50%;
+    display: flex;
+    z-index: 50;
+}
+
+#burgerLayers img{
+    width: 100%;
+}
+
+/* grid rowspan buat gambar "burgerLayers" */
+#burgerLayers{
+    grid-column: 2;
+    grid-row: 1/span 3;
+}
+
+
+/* ingredients item membesar saat di-hover */
+.ingredientsItem:hover{
+    transform: scale(1.2);
+}
+
+/* gambar ingredients (kecuali burgerLayers) jadi buram saat di-hover */
+.ingredientsItem:not(#burgerLayers):hover img{
+    filter: blur(2px);
+}
+
+/* menampilkan tulisan ingredients saat di-hover */
+.ingredientsItem:not(#burgerLayers):hover label{
+    display: inline;
+}
+
+/* burgerLayers membesar sedikit saat di-hover */
+#burgerLayers:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1024px){
+
+    .videoBackground{
+        padding-bottom: 20px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
+    video{
+        width: 70%;
+    }
+
+    .gif, .descCS{
+        margin: 3rem 0px;
+    }
+    
+    h2{
+        text-align: center;
+        font-weight: 400;
+        font-size: large;
+    }
+
+    .descCS h3{
+        margin-bottom: 20px;
+    }
+    .descCS p{
+        font-size: medium;
+    }
+
+    .teaserH3{
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width: 50%;
+        font-weight: 600;
+    }
+    
+    .teaserBackground{
+        background-color: #5B3500;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    h3{
+        height: 100%;
+        padding-top: 20px;
+        font-size: larger;
+        
+    }
+  
+    .labelContainer{
+        width: 50%;
+        height: 30px;
+        margin-left: -50%;
+        padding-left: -20%;
+    }
+
+    .ingredientsItem label{
+        font-weight: 200;
+        font-size: small;
+        letter-spacing: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+
+    .videoBackground{
+        padding-bottom: 10px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .gif, .descCS{
+        margin: 0;
+    }
+
+    .h2Container{
+        margin: 20px;
+    }
+
+    h2{
+        font-size: medium;
+    }
+
+    .descCS h3{
+        margin-bottom: 10px;
+    }
+
+    .descCS p{
+        font-size: small;
+    }
+
+    .teaserH3{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 50%;
+        font-weight: 600;
+    }
+    
+    .teaserBackground{
+        background-color: #5B3500;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    h3{
+        padding-top: 10px;
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    /* Sengaja balikin ukuran label walaupun gak ditujukkin supaya posisinya tetap sama */
+    .labelContainer{
+        width: 24%;
+        height: 40px;
+        margin-left: -37%;
+    }
+    .ingredientsItem label{
+        font-weight: bold;
+        font-size: large;
+        letter-spacing: 5px;
+    }
+
+    /* gambar ingredients item tidak blur lagi saat di-hover */
+    .ingredientsItem:not(#burgerLayers):hover img{
+        filter: blur(0px);
+    }
+    
+    /* tulisan ingredients tidak ditampilkan saat di-hover */
+    .ingredientsItem:not(#burgerLayers):hover label{
+        display: none;
+    }
+}

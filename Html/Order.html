@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuRHger King - Order</title>
+    <!-- External CSS -->
+    <link rel = "icon" href = "..\Asset\Logo.jpg">
+    <link rel="stylesheet" href="../CSS/allNav.css">
+    <link rel="stylesheet" href="../CSS/order.css">
+    
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo"> 
+            <img src="..\Asset\Logo.jpg" alt="BuRHger King Logo">
+            <a>BuRHger King</a>
+        </div>
+
+        <input type="checkbox" class="check" id="navBtn">
+        <label for="navBtn" class="icon">
+            <span class="hamburger"></span>
+        </label>
+
+        <div class="navigation">
+            <span><a href="Home.html">Home</a></span>
+            <span><a href="Menu.html">Menu</a></span>
+            <span><a href="Order.html" class="navNow">Order</a></span>
+            <span><a href="ComSoon.html">Coming Soon Burger</a></span>
+            <span><a href="About.html">About Us</a></span>
+        </div>
+             
+        <div class="bg"> </div>
+    </nav>
+
+    <div class="content">
+        <h1>Order your burgers!</h1>  
+        <section class="Order">
+            <!-- Muncul notifikasi kalau sudah sumbit form -->
+            <form onsubmit="alert('Your order has been processed')">
+                <!-- full name (validasi required, minlegth, dan maxlength) -->
+                <div class="field-container">
+                    <input type="text" id="name" placeholder="Full Name" required minlength="6" maxlength="30">
+                </div>
+
+                <!-- email (validasi required) -->
+                <div class="field-container">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+
+                <!-- selected burger (validasi required) -->
+                <div class="field-container">
+                    <label for="selectedBurger">Order:</label>
+                    <select id="selectedBurger" required>
+                        <option value="">-- Select Order --</option>
+                        <option value="Beef Bacon">Beef Bacon</option>
+                        <option value="Chick O' Beef">Chick O' Beef</option>
+                        <option value="Minigers">Minigers</option>
+                        <option value="Sunny Side Chick">Sunny Side Chick</option>
+                        <option value="Croigers">Croigers</option>
+                        <option value="The Regular">The Regular</option>
+                        <option value="Chickbuns">Chickbuns</option>
+                        <option value="French Fries">French Fries</option>
+                        <option value="Cola">Cola</option>
+                    </select>
+                </div>
+
+                <!-- quantity (validasi required, min, dan max) -->
+                <div class="field-container" id="qtyField">
+                    <label for="qty">Quantity:</label>
+                    <label class="note">*max 10pcs per item</label>
+                    <input type="number" id="qty" placeholder="1" min="1" max="10" required>
+                </div>
+
+                <!-- address (validasi required) -->
+                <div class="field-container">
+                    <input type="text" id="address" placeholder="Address" required>
+                </div>
+
+                <!-- terms and conditions (validasi required) -->
+                <div class="field-container" id="agreementContainer">
+                    <input type="checkbox" id="agreement" required>
+                    <label for="agreement" class="agreementLabel">I agree with terms and conditions</label>
+                   
+                </div>
+
+                <!-- button submit dan reset -->
+                <div class="buttonContainer">
+                    <button type="submit" class="submit">Place Order</button>
+                    <button type="reset" class="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
